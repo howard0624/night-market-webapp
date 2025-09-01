@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://你的網域或子網域/sitemap.xml

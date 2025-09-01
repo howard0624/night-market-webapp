@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: night-market-webapp
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /

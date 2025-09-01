@@ -1,0 +1,26 @@
+# Maven build 輸出的檔案
+target/
+
+# 日誌檔
+*.log
+
+# IDE 設定檔
+*.iml
+.idea/
+.settings/
+.classpath
+.project
+
+# Eclipse 產生的檔案
+/.metadata/
+/bin/
+/tmp/
+
+# 系統暫存檔
+.DS_Store
+Thumbs.db
+
+# 如果有私密金鑰或憑證，也建議加上
+*.pem
+*.key
+*.secret
