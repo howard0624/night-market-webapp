@@ -1,5 +1,5 @@
 # Maven build 輸出的檔案
-target/
+target/ 
 
 # 日誌檔
 *.log
