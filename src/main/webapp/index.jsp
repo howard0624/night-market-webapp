@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+  // 預設自動導向到登入頁；帶 ?home=1 可停用導向以檢視首頁
+  if (!"1".equals(request.getParameter("home"))) {
+    response.sendRedirect(request.getContextPath() + "/login.jsp");
+    return;
+  }
+%>
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -52,7 +59,7 @@
 
   <script>
     (function () {
-      // 自動產生：主機 + contextPath + "/"（例如 https://xxx.ngrok.app/你的專案/）
+      // 自動產生：主機 + contextPath + "/"（例如 https://xxx.onrender.com/）
       const targetUrl = window.location.origin + '<%= request.getContextPath() %>/';
       document.getElementById('pageUrl').textContent = targetUrl;
 
@@ -62,9 +69,6 @@
         height: 220,
         correctLevel: QRCode.CorrectLevel.M
       });
-
-      // 若你想固定成正式網域，改成：
-      // const targetUrl = "https://你的正式網址/";
     })();
   </script>
 </body>
