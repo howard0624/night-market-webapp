@@ -25,3 +25,6 @@ Thumbs.db
 *.key
 *.secret
 night-market-webapp/
+night-market-webapp/
+bin/
+target/
