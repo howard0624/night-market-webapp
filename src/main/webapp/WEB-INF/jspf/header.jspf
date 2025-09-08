@@ -1,0 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link rel="stylesheet" href="<c:url value='/assets/style.css'/>">
+<header style="padding:12px 16px;border-bottom:1px solid #eee">
+  <strong>寧夏夜市</strong>
+</header>
