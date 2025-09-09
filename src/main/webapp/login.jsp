@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jspf/header.jspf" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8"/>
@@ -9,6 +8,7 @@
   <title>登入</title>
 </head>
 <body>
+<%@ include file="/WEB-INF/jspf/header.jspf" %>
 <div class="container">
   <h1>Login</h1>
 
@@ -25,20 +25,19 @@
 
   <form method="post" action="<c:url value='/login'/>">
     <label>Email</label>
-    <input type="email" name="email" value="<c:out value='${email}'/>" required
-           autocomplete="email" autofocus />
+    <input type="email" name="email" value="<c:out value='${email}'/>" required autocomplete="email" autofocus />
 
     <label>密碼</label>
     <input type="password" name="password" required autocomplete="current-password" />
 
-    <div style="margin-top:12px;">
+    <div class="form-actions">
       <button type="submit" class="btn">登入</button>
       <a class="btn" style="background:#374151;" href="register.jsp">沒有帳號？去註冊</a>
     </div>
   </form>
 
   <c:if test="${not empty email}">
-    <form method="post" action="<c:url value='/resend-verify'/>" style="margin-top:12px">
+    <form method="post" action="<c:url value='/resend-verify'/>" class="form-actions">
       <input type="hidden" name="email" value="<c:out value='${email}'/>"/>
       <button class="btn" type="submit">重新寄送驗證信</button>
     </form>
