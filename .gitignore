@@ -28,3 +28,4 @@ night-market-webapp/
 night-market-webapp/
 bin/
 target/
+*.bak
